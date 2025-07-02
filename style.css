@@ -1,4 +1,4 @@
-/* Reset and Fonts */
+/* === Reset & Fonts === */
 * {
   margin: 0;
   padding: 0;
@@ -13,21 +13,23 @@ body {
   padding: 20px;
 }
 
-/* Header */
+/* === Hero/Header Section === */
 .hero-section {
-  position: relative;
   background: rgba(20, 20, 30, 0.85);
   padding: 60px 20px;
   border-radius: 20px;
   text-align: center;
   box-shadow: 0 0 25px #00000099;
   margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .profile-container {
   width: 140px;
   height: 140px;
-  margin: 0 auto 20px;
+  margin-bottom: 20px;
   border: 4px solid #ff003c;
   border-radius: 50%;
   overflow: hidden;
@@ -42,19 +44,30 @@ body {
 }
 
 .intro-text h1 {
-  font-size: 3rem;
+  font-size: 2.8rem;
   font-family: 'UnifrakturCook', cursive;
   color: #ff1744;
   letter-spacing: 2px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.intro-text h1 img.icon {
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+  filter: brightness(1.1) drop-shadow(0 0 4px red);
 }
 
 .intro-text p {
   font-size: 1.1rem;
   color: #ccc;
-  margin-top: 10px;
 }
 
-/* Sections */
+/* === Section Layout === */
 section {
   background-color: rgba(18, 18, 18, 0.9);
   padding: 30px;
@@ -76,7 +89,7 @@ ul li {
   line-height: 1.6;
 }
 
-/* Footer */
+/* === Footer === */
 footer {
   text-align: center;
   padding: 15px;
@@ -84,4 +97,52 @@ footer {
   font-size: 0.9rem;
   background: rgba(0, 0, 0, 0.5);
   border-radius: 12px;
+}
+
+/* === Responsive Media Queries === */
+@media (max-width: 768px) {
+  .intro-text h1 {
+    font-size: 2.2rem;
+    text-align: center;
+  }
+
+  .intro-text p {
+    font-size: 1rem;
+  }
+
+  .profile-container {
+    width: 120px;
+    height: 120px;
+  }
+
+  section {
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 15px;
+  }
+
+  .intro-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .profile-container {
+    width: 100px;
+    height: 100px;
+  }
+
+  .intro-text p {
+    font-size: 0.95rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
 }
